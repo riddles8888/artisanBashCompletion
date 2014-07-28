@@ -39,7 +39,12 @@ class listForBash extends Command {
 	{
 		$commandTyped = $this->argument('commandTyped');
 
-		$allCommands = array_keys($this->getApplication()->all());
+		$allCommands = Cache::get('artisanBashCompletion');
+		if (! $allCommands){
+			$allCommands = array_keys($this->getApplication()->all());
+
+			Cache::put('artisanBashCompletion', $allCommands, 5);
+		}
 		
 		if ($commandTyped) {
 			$colonAt = strpos($commandTyped, ':');
