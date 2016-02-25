@@ -2,6 +2,7 @@ Updated for Laravel 5 Artisan CLI!
 --------------------------
 Original project https://github.com/janka/artisanBashCompletion
 
+Ongoing work seems to be done here: https://github.com/argakiig/artisanBashCompletion
 
 artisanBashCompletion
 =====================
