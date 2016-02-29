@@ -1,9 +1,15 @@
+Updated for Laravel 5 Artisan CLI!
+--------------------------
+Original project https://github.com/janka/artisanBashCompletion
+
+Ongoing work seems to be done here: https://github.com/argakiig/artisanBashCompletion
+
 artisanBashCompletion
 =====================
 
-This adds bash completion for Laravel 4s artisan CLI.
+This adds bash completion for Laravel 5s artisan CLI.
 
-- Put "listForBash.php" in app/commands/ and register it in app/start/artisan.php with `Artisan::add(new listForBash);`
+- Put "listForBash.php" in app/Console/Commands/ and register it in app/Console/Commands/Kernel.php under $commands as  `\App\Console\Commands\listForBash::class,`
 
 - Make artisan executable with `chmod +x artisan`
 
@@ -16,7 +22,7 @@ source /etc/bash_completion.d/artisan;`
 
 Now use `artisan ` and start tabbing away...
 
-Tested on Debian, Cent OS 6 and php 5.4 (I fancy the new array style, but replace that and it should work with prior versions)
+Tested on Ubuntu and php 5.6
 
 Have fun...
 
